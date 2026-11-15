@@ -20,6 +20,5 @@ jobs:
     with:
       build: |
         if [ "$GITHUB_REF_TYPE" = tag ]; then set -- --release "${GITHUB_REF_NAME#v}"; else set --; fi
-        for m in pro elite mke; do ./build.sh --board smk37 --model "$m" "$@"; done
-        ./build.sh "$@"
+        ./build.sh --no-ble "$@"
       packages: build/fm1-dock*.fwsc
