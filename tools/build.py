@@ -193,7 +193,7 @@ def build_loader():
 
 APP = "fm1-dock"                    # the outputs' name (--name) (build/fm1-dock.bin, .fwsc, .syms, ...)
 HOST = "dock"
-PACKAGE = ["fomni", "amb"]   # the modules in the package (all of modules/ no longer fits its app slot)                       # the host's source: firmware/src/dock.c
+PACKAGE = ["fomni", "amb", "fmini"]   # the modules in the package (all of modules/ no longer fits its app slot)                       # the host's source: firmware/src/dock.c
 SLOT_TABLE = 0x02030000             # firmware/src/dock.c HB_TABLE_AT (flash 0x34000)
 SLOT_FIRST = SLOT_TABLE + 0x1000
 HX_XIP = 0x02084000                 # firmware/src/ble/hx.h HX_AT (flash 0x88000): BLE-MIDI, a unit of its own (SMK-37: main)
